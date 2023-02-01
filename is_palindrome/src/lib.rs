@@ -16,4 +16,14 @@ impl Solution {
 
         false
     }
+
+    pub fn is_palindrome_two(x: i32) -> bool {
+        let s = x.to_string();
+        let mut reverted_number = String::with_capacity(s.len());
+        for (i, c) in s.chars().rev().enumerate() {
+            reverted_number.insert(i, c);
+        }
+
+        reverted_number == s
+    }
 }
