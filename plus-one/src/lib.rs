@@ -1,21 +1,19 @@
 impl Solution {
     pub fn plus_one(digits: Vec<i32>) -> Vec<i32> {
-        let mut t = 1;
-        let mut ans = digits;
-        for i in (0..ans.len()).rev(){
-            if ans[i]+t < 10{
-                ans[i] += t;
-                return ans;
+        let mut new_digits = digits;
+        for i in (0..new_digits.len()).rev(){
+            if new_digits[i] < 9{
+                new_digits[i] += 1;
+                return new_digits;
             }else{
-                ans[i] = (t+ans[i])%10;
-                t = 1;
+                new_digits[i] = 0;
                 if i == 0{
-                    ans.insert(0, 1);
-                    return ans;
+                    new_digits.insert(0, 1);
+                    return new_digits;
                 }
             }
         }
-        ans
+        new_digits
     }
 }
 
