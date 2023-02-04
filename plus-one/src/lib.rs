@@ -4,9 +4,10 @@ impl Solution {
         //     return vec![1];
         // }
         let mut new_digits: Vec<i32> = digits.clone();
-        for i in digits.len() - 1..=0 {
+        for i in (digits.len() - 1)..=0 {
             if digits[i] != 9 {
                 new_digits[i] = digits[i] + 1;
+                println!("{} - {}", digits[i] , new_digits[i]);
                 return new_digits;
             } else {
                 new_digits[i] = 0;
@@ -18,5 +19,19 @@ impl Solution {
         }
 
         new_digits
+    }
+}
+
+struct Solution{}
+
+#[cfg(test)]
+mod test{
+    use crate::Solution;
+
+    #[test]
+    fn test() {
+        let a = vec![1,2,3];
+        let b = Solution::plus_one(a);
+        println!("{:?}", b);
     }
 }
