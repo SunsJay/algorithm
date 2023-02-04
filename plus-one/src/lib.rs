@@ -3,7 +3,7 @@ impl Solution {
         // if digits.len() == 1 && digits[0] == 0 {
         //     return vec![1];
         // }
-        let mut new_digits: Vec<i32> = digits;
+        let mut new_digits: Vec<i32> = digits.clone();
         for i in digits.len() - 1..=0 {
             if digits[i] != 9 {
                 new_digits[i] = digits[i] + 1;
