@@ -8,3 +8,15 @@ impl Solution {
         0
     }
 }
+
+struct Solution{}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+    #[test]
+    fn test_search() {
+        assert_eq!(Solution::search_insert(vec![1,3,5,6], 2), 1);
+
+    }
+}
