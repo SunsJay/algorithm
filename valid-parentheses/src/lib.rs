@@ -1,5 +1,7 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+impl Solution {
+    pub fn is_valid(s: String) -> bool {
+
+    }
 }
 
 #[cfg(test)]
